@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeedBox Club</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d1117 url('https://via.placeholder.com/1920x1080?text=Tech+Background') no-repeat center center fixed;
+            background-size: cover;
+            color: #c9d1d9;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(20, 30, 48, 0.8);
+            color: #58a6ff;
+            padding: 2rem 0;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 0.15rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(22, 27, 34, 0.9);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideIn 1s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            color: #c9d1d9;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        nav a:hover {
+            color: #58a6ff;
+            transform: scale(1.1);
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            background: rgba(13, 17, 23, 0.85);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        section {
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .about h2, .events h2, .contact h2 {
+            color: #58a6ff;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .about h2::after, .events h2::after, .contact h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #58a6ff;
+            margin: 0.5rem auto;
+        }
+
+        .about p {
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .events {
+            text-align: center;
+        }
+
+        .events img {
+            width: 100%;
+            max-width: 400px;
+            margin: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transform: scale(1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .events img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .events p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .contact p {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .contact a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #f39c12;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: rgba(22, 27, 34, 0.9);
+            color: #c9d1d9;
+            font-size: 0.9rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 1rem;
+                font-size: 1rem;
+            }
+
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .about p, .contact p {
+                font-size: 1rem;
+            }
+
+            .events img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FeedBox Club</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="content">
+        <section id="about" class="about">
+            <h2>About FeedBox Club</h2>
+            <p>Welcome to FeedBox Club, the hub for tech enthusiasts and innovators! We are committed to empowering individuals with knowledge, fostering creativity, and driving technological advancements. Whether you are a seasoned developer or just stepping into the tech world, FeedBox Club has something for everyone!</p>
+        </section>
+
+        <section id="events" class="events">
+            <h2>Past Events</h2>
+            <div>
+                <img src="C:\Users\Suyash\Downloads\feedbox\hackathon-signs-round-design-template-thin-line-vector-28032709.jpg" alt="Hackathon">
+                <p><strong>Hackathon:</strong> A 24-hour coding marathon where teams collaborated to create innovative tech solutions.</p>
+            </div>
+            <div>
+                <img src="C:\Users\Suyash\Downloads\feedbox\innovative-tech-workshop-engineers-assembling-complex-machinery-futuristic-setting_770200-2322.jpg" alt="Tech Workshop">
+                <p><strong>Tech Workshop:</strong> An engaging session on AI and machine learning led by industry experts.</p>
+            </div>
+            <div>
+                <img src="C:\Users\Suyash\Downloads\feedbox\GettyImages-647875454.jpg" alt="Networking Night">
+                <p><strong>Networking Night:</strong> A gathering for professionals and enthusiasts to exchange ideas and build connections.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Got questions or want to join our community? Reach out to us!</p>
+            <p>Email: <a href="mailto:feedboxclub123@gmail.com">feedboxclub123@gmail.com</a></p>
+            <p>Phone: +917852702567</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 FeedBox Club. Innovating the future.</p>
+    </footer>
+</body>
+</html>
